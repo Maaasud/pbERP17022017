@@ -1,0 +1,164 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+using System.Web.Script.Services;
+using System.Web.Services;
+using System.Data;
+using System.Data.SqlClient;
+using System.Web.Configuration;
+using pbERP.Class;
+namespace pbERP.Module_Buyer_Shipment.UI
+{
+    public partial class frmExpenseEntry : System.Web.UI.Page
+    {
+        int userId = 1;
+        int ExpenseByID = 0;
+        int ExpenseHeadID = 0;
+
+
+        List<string> query = new List<string>();
+        int counter = 0;
+        int saveResult = 0;
+
+//http://www.aspdotnet-pools.com/2014/06/javascript-confirm-message-from-code.html
+        protected void Page_Load(object sender, EventArgs e)
+        {
+            if (!IsPostBack)
+            {
+                clearForm();
+            }
+        }
+
+        public void BindDataTable()
+        {
+            string query = "Exec getExpListForExpenseForm";
+
+            SqlDataReader user = DataHelper.getReader(query);
+
+            String UnreadText = "";
+            Int32 i = 0;
+
+
+            while (user.Read())
+            {
+
+                UnreadText += "<tr>";
+                UnreadText += "			<td class=\"center\">" + user["TransId"] + "</td>";
+                UnreadText += "			<td class=\"center\">" + user["JobRefNo"] + "</td>";
+                UnreadText += "			<td class=\"center\">" + user["TransactionDate"] + "</td>";
+                UnreadText += "			<td class=\"center\">" + user["EmpName"] + "</td>";
+                UnreadText += "			<td class=\"center\">" + user["ExpenseHead"] + "</td>";
+                UnreadText += "			<td class=\"center\">" + user["CrAmount"] + "</td>";
+                UnreadText += "			<td class=\"center\">" + user["Remarks"] + "</td>";
+                UnreadText += "<td ><a id='1' class=\"btn btn-info\" href=\"frmcity.aspx?ID=" + user[0] + "\">Edit</td>";
+                UnreadText += "		</tr>";
+                tlist.InnerHtml = UnreadText;
+                i++;
+            }
+
+        }
+
+        //private void dataloadDropDownList()
+        //{
+        //    string query = "";        
+        //    query = "Select ExpenseHeadId,ExpenseHead From tblGS_NonAccountExpenseHead Order By ExpenseHead";
+        //    DataHelper.DataLoadToDropDownList(query, ddlExpenseHead, "ExpenseHead", "ExpenseHeadId");
+        //}
+
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            DateTime dob = DateTime.Parse(Request.Form[txtExpenseDate.UniqueID]);
+           
+            DataTable dt = DataHelper.GetData("Select SHP_JobNumber From tblSHP_SampleRequestFromBuyer Where SHP_JobNumber='" +txtJobNumber.Text + "'").Tables[0];
+
+
+            if (ErrorFound())
+                return;
+
+            ExpenseByID = DataHelper.getID("EmpId", "tblHRM_EmployeeDetails", "EmpName", "=", txtExpenseBy.Text);
+            ExpenseHeadID = DataHelper.getID("ExpenseHeadId", "tblGS_NonAccountExpenseHead", "ExpenseHead", "=", txtExpenseHead.Text);
+            
+            if (string.IsNullOrEmpty(txtExpenseDate.Text))
+            {
+                txtExpenseDate.Text = DateTime.Now.ToShortDateString();
+            }
+
+            if (dt.Rows.Count == 0)
+            {
+                lblErrorMsg.Text = "No Job Number Found!!!";
+                return;
+            }
+
+
+            string strsql = "Exec SPInsert 'NonAccExIn','" + txtExpenseNo.Text + "','" + txtJobNumber.Text + "','" + txtExpenseDate.Text + "','" + ExpenseByID + "','" + txtRemarks.Text + "','" + ExpenseHeadID + "','" + 0 + "','" + txtAmount.Text + "','" + clsGlobalVariable.RunningCompanyId + "','" + clsGlobalVariable.RunningCompanyBranchId + "'";
+                
+            saveResult = DataHelper.executeNonQuerySP(strsql);
+
+            if (saveResult == 1)
+            {
+                lblErrorMsg.Text = "Data Saved Successfully!!!";
+                clearForm();
+            }
+            else
+                lblErrorMsg.Text = "Error found," + " Data not saved." + " Please try again!!!";
+        }
+
+        private void clearForm()
+        {
+           
+            txtExpenseNo.Text = DataHelper.getTableMaxId_Sql("TransId", "tblACC_NonAccountingExIn").ToString();
+            txtAmount.Text = "";
+            txtExpenseBy.Text = "";
+            txtJobNumber.Text = "";
+            txtExpenseHead.Text = "";
+            //dataloadDropDownList();
+            txtExpenseHead.Focus();
+            BindDataTable();
+        }
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static List<string> getExpenseBy(string pre)
+        {
+            List<string> searchResult = new List<string>();
+            string query = "Select EmpName From tblHRM_EmployeeDetails Where EmpName Like '%" + pre + "%' Order By EmpName";
+            return searchResult = DataHelper.getSearchList(query);
+        }
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static List<string> getJobNumber(string pre)
+        {
+            List<string> searchResult = new List<string>();
+            string query = "Select SHP_JobNumber From tblSHP_SampleRequestFromBuyer Where SHP_JobNumber Like '%" + pre + "%' Order By SHP_JobNumber";
+            return searchResult = DataHelper.getSearchList(query);
+        }
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
+        public static List<string> getExpenseHead(string pre)
+        {
+            List<string> searchResult = new List<string>();
+            string query = "Select ExpenseHead From tblGS_NonAccountExpenseHead Where ExpenseHead Like '%" + pre + "%' Order By ExpenseHead";
+            return searchResult = DataHelper.getSearchList(query);
+        }
+        private bool ErrorFound()
+        {
+            if (string.IsNullOrEmpty(txtExpenseBy.Text))
+            {
+                lblErrorMsg.Text = "Input Local LC No!!!";
+                return true;
+            }
+
+
+            else
+                lblErrorMsg.Text = "";
+            return false;
+        }
+    }
+
+}

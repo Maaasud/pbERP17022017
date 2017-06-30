@@ -1,0 +1,186 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+h1,h2,h3,h4,h5,h6{ font-family: 'Oswald', sans-serif; }
+body, html {font-family: 'Open Sans', sans-serif;}
+
+.clr { clear:both;}
+img{ max-width: 100%; }
+
+
+
+body {
+
+}
+
+.U_Form_Upper_Panel {
+padding: 10px 10px ;            /*20px 10px;*/
+margin: 0 0 10px;                   /*0 0 10px*/
+background: #01355c;
+background: -moz-linear-gradient(top,  #01355c 0%, #045ca3 100%);
+background: -webkit-linear-gradient(top,  #01355c 0%,#045ca3 100%);
+background: linear-gradient(to bottom,  #01355c 0%,#045ca3 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01355c', endColorstr='#045ca3',GradientType=0 );
+}
+
+.top_fixed {
+    width: 100%;
+position: fixed;
+} 
+.CompanyNameTitle {
+font-size:30px;
+color:#fff;
+line-height:110%;
+font-weight:600;
+text-transform: uppercase !important;
+text-align:center;
+margin: 0;
+
+}
+
+.U_Form_Middle_Pannel {
+padding:100px 0 30px;
+}
+
+.site_tag_left{ float:left; width:45%; height:10px;}
+.site_tag_right{ float:left; width:55%;}
+.site_tag_right h3{ margin: 0; color:#000; font-size:12px;}
+.loginWrap {
+margin: 0 auto;
+width:100%;
+max-width:350px;
+box-shadow: 0 0 4px #333;
+-webkit-box-shadow: 0 0 4px #333;
+padding:15px;
+border-radius:7px;
+-webkit-border-radius:7px;
+}
+
+    .loginWrap h2 {
+    margin:0 0 15px;
+    padding:10px 0 15px;        /*30px 15px*/
+    border-bottom: 1px #ddd solid;
+    text-align:center;
+    }
+    .LoginInputArea{
+        padding:5px 0;/*10pc 0*/
+    }
+
+        .LoginInputArea input {
+        border:1px #ddd solid;
+        padding: 5px;/*12px*/
+        margin-bottom:10px;
+        font-size:14px;
+        border-radius:5px;
+        -webkit-border-radius:5px;
+        width:100%;
+        max-width:90%;
+
+        }
+        .timeBx{
+        font-size: 12px;
+        color:#f00;
+        font-style: italic;
+        }
+        .submitBttn{
+            border-top: 1px #ddd solid;
+            border-bottom: 1px #ddd solid;
+
+        }
+
+        .submitBttn input[type="submit"]{ max-width:100%; background: #ff920e; text-transform: uppercase; color:#fff;}
+        .submitBttn input[type="submit"]:hover{ background:#d67601;}
+
+.U_Form_Lower_Pannel {
+padding: 20px 10px 15px;
+margin: 0 0 10px;
+background: #045ca3;
+background: -moz-linear-gradient(top,  #045ca3 0%, #01355c 100%);
+background: -webkit-linear-gradient(top,  #045ca3 0%,#01355c 100%);
+background: linear-gradient(to bottom,  #045ca3 0%,#01355c 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#045ca3', endColorstr='#01355c',GradientType=0 );
+}
+
+.footerCmpName{}
+.footerCmpName h3{ color:#fff; margin: 0; text-transform: uppercase; }
+.logoTag{ font-size: 10px; color: #999; font-style: italic; padding-bottom:10px; }
+address{ color: #f7f7f7;}
+
+
+
+.panel-heading{ padding:0;}
+.panel-heading a{ display: block; text-decoration: none; padding: 7px;}
+.panel-heading .glyphicon{ padding-right: 10px;}
+
+.panel-body{}
+.panel-body ul{ margin:0; padding: 0;}
+.panel-body ul li{ list-style:none;}
+.panel-body ul li a{ display: block; padding: 5px 0; text-decoration:none; border-bottom: 1px #f2f2f2 solid;}
+.panel-body ul li .glyphicon{ padding-right:10px;}
+.panel-body ul li i.label{ padding-left:10px;}
+
+
+
+
+.dsboard_logo{ padding-top: 0px; padding-bottom:0px; margin-bottom: 0px; text-align: center; background: rgba(4,92,163,0.5); border-radius: 0 0 10px 10px; -webkit-border-radius: 0 0 10px 10px; }
+.dsboard_logo img{ max-height: 65px;  }
+
+
+
+.errmsgLabel {
+    width:100%;
+    padding-bottom:0px;
+}
+
+.headRight .headRightTop{ 
+    color: #fff; margin-bottom: 25px;
+background: #01355c;
+background: -moz-linear-gradient(top,  #01355c 0%, #045ca3 100%);
+background: -webkit-linear-gradient(top,  #01355c 0%,#045ca3 100%);
+background: linear-gradient(to bottom,  #01355c 0%,#045ca3 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01355c', endColorstr='#045ca3',GradientType=0 );
+padding-top: 15px;
+padding-bottom: 15px;
+box-shadow: 0 0 5px #ddd;
+-webkit-box-shadow: 0 0 5px #ddd;
+border-radius: 0 0 7px 7px;
+-webkit-border-radius: 0 0 7px 7px;
+}
+
+.dsboard_logo_txt{
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+
+
+.DeshBrd_mainContentWrap{
+    margin: 10px 0 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0 0 3px #999;
+    -webkit-box-shadow: 0 0 3px #999;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.DeshBrd_title{
+    font-size: 18px;
+    text-transform:uppercase;
+    color: #333;
+    border-bottom: 1px #ddd solid;
+    margin:0 0 15px;
+    padding:0 0 7px;
+}
+
+.contentBx{
+    color: #333;
+    font-size: 13px;
+    line-height: 130%;
+    padding: 15px;
+}
+
+
+
+
+

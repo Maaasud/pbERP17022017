@@ -1,0 +1,490 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+
+h1,h2,h3,h4,h5,h6{ font-family: 'Oswald', sans-serif; }
+body, html {font-family: 'Open Sans', sans-serif;}
+.fa{ font-family:FontAwesome !important}
+
+.clr { clear:both;}
+img{ max-width: 100%; }
+
+.textBottomPadding {
+padding-bottom:3px !important;
+}
+
+a:hover,
+a:focus,
+a{ text-decoration: none; }
+
+
+a:hover,
+a{ transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; }
+
+
+.btn.btn-default,
+.btn.btn-success,
+.btn.btn-info,
+.btn.btn-warning,
+.btn.btn-danger,
+.btn.btn-primary{ padding-left: 35px !important; padding-right: 35px !important; text-transform: uppercase; font-size:14px; }
+.crateViewSubmit{ float: left;}
+
+
+
+
+body {
+
+}
+
+.U_Form_Upper_Panel {
+padding: 10px 10px;            /*20px 10px;*/
+margin: 0 0 0px;                   /*0 0 10px*/
+background: linear-gradient(#01355c, #045ca3);
+}
+
+.top_fixed {
+    width: 100%;
+position: fixed;
+} 
+.CompanyNameTitle {
+font-size:30px;
+color:#fff;
+line-height:110%;
+font-weight:600;
+text-transform: uppercase !important;
+text-align:center;
+margin: 0;
+
+}
+
+.U_Form_Middle_Pannel {
+padding:130px 0 30px;
+}
+
+.site_tag_left{ float:left; width:45%; height:10px;}
+.site_tag_right{ float:left; width:55%;}
+.site_tag_right h3{ margin: 0; color:#000; font-size:12px;}
+
+.loginWrap {
+margin: 0 auto;
+width:100%;
+max-width:350px;
+box-shadow: 0 0 4px #333;
+-webkit-box-shadow: 0 0 4px #333;
+padding:15px;
+border-radius:7px;
+-webkit-border-radius:7px;
+}
+
+    .loginWrap h2 {
+    margin:0 0 15px;
+    padding:10px 0 15px;        /*30px 15px*/
+    border-bottom: 1px #ddd solid;
+    text-align:center;
+    }
+    .LoginInputArea{
+        padding:5px 0;/*10pc 0*/
+    }
+
+        .LoginInputArea input {
+        background: #dde9f4;
+        border:1px #ddd solid;
+        padding: 10px 5px;/*12px*/
+        margin-bottom:10px;
+        font-size:14px;
+        border-radius:5px;
+        -webkit-border-radius:5px;
+        width:100%;
+        max-width:100%;
+
+        }
+        .timeBx{
+        font-size: 12px;
+        color:#f00;
+        font-style: italic;
+        }
+        .submitBttn{
+            border-top: 1px #ddd solid;
+            border-bottom: 1px #ddd solid;
+
+        }
+
+        .LoginInputArea select.btn.btn-default{ padding-top: 10px !important; padding-bottom: 10px !important; background: #dde9f4;}
+
+        .submitBttn input[type="submit"]{ max-width:100%; background: #ff920e; text-transform: uppercase; color:#fff;}
+        .submitBttn input[type="submit"]:hover{ background:#d67601;}
+
+
+
+
+.U_Form_Lower_Pannel {
+padding: 20px 10px 15px;
+margin: 0 0 10px;
+background: linear-gradient(#01355c, #045ca3);
+}
+
+.U_Form_Lower_Pannel {
+width: 100%;
+position: fixed;
+left: 0;
+bottom: 0;
+}
+
+.footerCmpName{}
+.footerCmpName h3{ color:#fff; margin: 0; text-transform: uppercase; }
+.logoTag{ font-size: 10px; color: #999; font-style: italic; padding-bottom:10px; }
+address{ color: #f7f7f7;}
+
+
+
+
+
+.dsboard_logo{ padding-top: 10px; padding-bottom: 10px; margin-bottom: 0px; text-align: center;}
+.dsboard_logo img{ max-height: 40px;  }
+
+
+header{
+
+    margin-bottom:25px;
+    background: linear-gradient(#01355c, #045ca3);
+ border-radius: 0 0 10px 10px;
+ -webkit-border-radius: 0 0 10px 10px; 
+ box-shadow: 0 0 5px #fff;
+ -webkit-box-shadow: 0 0 5px #fff;
+}
+
+.headRightTop{ 
+    color: #fff;
+}
+
+.dsboard_logo_txt{
+    font-size: 28px;
+    text-transform: uppercase;
+    padding:10px 0 0;
+}
+
+
+
+.DeshBrd_mainContentWrap{
+    margin: 10px 0 0;
+    box-shadow: 0 0 3px #999;
+    padding-bottom:15px;
+    -webkit-box-shadow: 0 0 3px #999;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.DeshBrd_title{
+    font-size: 22px;
+    text-transform:uppercase;
+    font-weight:900;
+    text-shadow: 0 0 2px #023a65;
+    color: #fff;
+    border-bottom: 1px #ddd solid;
+    margin:0 0 15px;
+    padding: 10px 15px;
+    letter-spacing:1px;
+    background: #dde6ef;
+}
+
+.contentBx{
+    color: #333;
+    font-size: 13px;
+    line-height: 130%;
+    padding: 15px;
+}
+
+
+
+
+
+
+
+.crateViewFieldBox{ width: 48%; float: left; margin-right: 15px; margin-bottom: 6px;}
+.crateViewFieldBox .editor-label{ float: left; width: 45%; text-align: left; padding-right:10px; position: relative;}
+.crateViewFieldBox .editor-label::after{ content:"::"; position: absolute; top: 6px; right: 0; color: #336597; font-weight: 900;} 
+.crateViewFieldBox .editor-field{ float: left; width: 52%; text-align: left; padding-left:10px; }
+.crateViewFieldBox .editor-field select,
+.crateViewFieldBox .editor-field input{ border: 1px solid black; 
+background: #eff8fc; padding: 4px 10px; }
+.crateViewFieldBox .editor-field input:focus{ box-shadow: 0 0 3px #6699cc; }
+
+.crateViewFieldBox.fullbox{ width:100%; float: left; margin-right: 0; margin-bottom: 7px; }
+.display-label{ float: left; width: 45%; text-align: left; padding-right:10px; position: relative; font-weight: 900;}
+.display-field{ float: left; width: 45%; text-align: left; padding-right:10px; position: relative;}
+.display-label::after{ content:"::"; position: absolute; top: 0px; right: 30px; color: #336597; font-weight: 900;} 
+
+.crateViewFieldBox.fullbox:nth-child(odd){ background: #c2d7eb; padding: 7px;}
+
+.crateViewSubmitWrap{ width: 100%; float: left; padding:7px; margin-top: 20px; background: #c5e4f3; text-align: center;}
+.crateViewSubmit{ display: inline-block; margin: 0 10px;
+    width: 20px;
+}
+.backTo{ float: left; padding-right: 120px; }
+.backTo a{ padding: 6px 15px; text-decoration: none;}
+
+
+.crateViewWrap{ width:100%; padding-top:10px; }
+.crateViewWrap.fullbox .display-label, 
+.crateViewWrap.fullbox .display-field{ padding: 3px 10px; border-bottom: 1px #ddd solid; }
+
+.crateViewWrap.fullbox .display-label{ width: 30%;}
+.crateViewWrap.fullbox .display-field{ width: 68% }
+.crateViewWrap.fullbox .crateViewFieldBox .display-label,
+.crateViewWrap.fullbox .crateViewFieldBox .display-field{border-bottom: none; text-transform: uppercase; font-weight: 900; }
+
+.crateViewWrap.fullbox{}
+
+
+.formDesignWrapStyle1{}
+.formDesignWrapStyle1 .formDesignHead{ background: #d9edf7; text-align: center; padding: 15px 15px; margin-bottom: 15px; border-radius: 0 0 7px 7px; -webkit-border-radius: 0 0 7px 7px; box-shadow: 0 0 3px #999; -webkit-box-shadow: 0 0 3px #999; }
+.formDesignWrapStyle1 .formDesignHead h2{ margin: 0; padding: 0; color: #024071; }
+.formDesignWrapStyle1 .formDesignTable{}
+.formDesignWrapStyle1 .formDesignTable tr th{ background: #c5e4f3 !important; text-align: center; font-weight: 900; }
+.formDesignWrapStyle1 .formDesignTable tr:nth-child(even){ background: #fbfbd5; }
+.formDesignWrapStyle1 .formDesignTable{}
+.formDesignWrapStyle1 .formDesignTable{}
+.formDesignWrapStyle1 .formDesignTable{}
+.formDesignWrapStyle1 .formDesignTable{}
+.formDesignWrapStyle1{}
+
+
+.LoginInputAreaBttn{ text-align: center; margin-top:10px;}
+
+.pi {
+    width:100%;
+    float:left;
+}
+
+    .pi .pi_field {
+    display:inline-block;
+    float:left; width:28%;
+    padding-right:20px;
+    }
+
+        .pi .pi_field span {
+        display:block;
+        }
+
+    .pi .pi_field input{
+    width:100%;
+    }
+
+#ctl00_MainContent_txtWorkOrderNumber {
+    width:350px;
+}
+
+#Gridview1 {
+    max-width:1170px;
+
+}
+
+    #Gridview1 td input {
+    width:100%;
+    }
+
+
+.divclassCaption {
+    margin: auto;
+    width: 50%;
+    /*border: 3px solid green;*/
+    padding: 10px;
+    text-align: center;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.divHeadPart {
+    margin: auto;
+    width: 70%;
+    border: 3px solid green;
+    padding-bottom: 25%;
+    margin-bottom: 50px;
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.divDetailsPart {
+    margin: auto;
+    width: 70%;
+    border: 3px solid green;
+    padding-top: 0%;
+    margin-top: 50px;
+
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.divBottomPartWithBorder {
+    margin: auto;
+    width: 70%;
+    border: 3px solid green;
+    padding-top: 5%;
+    margin-top: 50px;
+
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.divBottomPartWithoutBorder {
+    margin: auto;
+    width: 70%;
+    /*border: 3px solid green;*/
+    padding-top: 5%;
+    margin-top: 0px;
+
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.divSignaturePart {
+    margin: auto;
+    width: 70%;
+    border: 3px solid green;
+    padding-top: 0%;
+    margin-top: 50px;
+
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.divAddressPart {
+    margin: auto;
+    width: 70%;
+    border: 3px solid green;
+    padding-top: 0%;
+    margin-top: 50px;
+
+    padding-left:0px;
+    padding-right:0px;
+}
+
+.leftDiv {
+  float: left;
+  width:50%;
+  text-align: left;
+  margin: 2px 10px;
+  display: inline;
+  border: 1px solid green;
+
+  padding-left:0px;
+  padding-right:0px;
+}
+
+.rightDiv {
+  float: left;
+  width:50%;
+  text-align: left;
+  margin: 2px 10px;
+  display: inline;
+  border: 1px solid green;
+}
+
+.BorderDiv {
+  float: left;
+  width:50%;
+  text-align: left;
+  margin: 2px 10px;
+  display: inline;
+  border: 1px solid green;
+}
+
+
+.table.table-striped.table-bordered,
+.ui-widget-header{ background: #1e5799 !important;
+background: -moz-linear-gradient(top,  #1e5799 0%, #7db9e8 100%) !important;
+background: -webkit-linear-gradient(top,  #1e5799 0%,#7db9e8 100%) !important;
+background: linear-gradient(to bottom,  #1e5799 0%,#7db9e8 100%) !important;
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ) !important;
+}
+
+.dataTables_info,
+.ui-widget-header label{ color:#fff !important;}
+.ui-widget-header input[type="search"],
+.ui-widget-header select{ color:#333;}
+.dataTables_wrapper .ui-toolbar{ padding:4px 0 0 !important;}
+.table-striped > tbody > tr > td { padding:1px 5px !important; border:none !important;}
+table.dataTable thead th div.DataTables_sort_wrapper{ text-align:center;}
+.table-striped > tbody > tr:nth-child(odd) > td,
+.table-striped > tbody > tr:nth-child(odd) > th { background: #f0f8ff}
+.fg-toolbar.ui-toolbar.ui-widget-header{ padding-left:10px !important; padding-right:10px !important;}
+
+ 
+
+.DataTables_sort_wrapper:hover{color: #225b9c}
+
+.table.table-striped.table-bordered input{ width:100%;}
+
+
+.info_list_tbl .btn.btn-info{ padding:0 10px !important; text-transform:capitalize;}
+.info_list_tbl table tr:nth-child(2){ text-align:left;}
+
+.table-striped > tbody > tr > td:nth-child(2),
+.info_list_tbl .table-striped > tbody > tr > td:nth-child(2){ text-align:left}
+
+
+
+
+.alert.alert-info { padding: 0 15px !important;}
+.alert.alert-info h2{ margin:0 !important; font-size:20px !important;}
+h2.text-center.inner_title { font-size:20px !important;}
+
+
+
+.table.buyer_workorder_tbl tr th{font-size:10px !important;}
+
+
+
+
+
+
+
+
+
+/*~=~=Media CSS Start~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=
+~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=~=*/
+@media (max-width: 1050px){
+
+
+}
+
+
+@media (max-width: 850px) {
+
+
+}
+
+
+
+@media (max-width:768px) {
+
+}
+
+
+
+@media (max-width: 600px) {
+    #ctl00_MainContent_txtWorkOrderNumber {
+        width:150px;
+    }
+
+    
+.table.buyer_workorder_tbl tr th{font-size:8px !important;}
+
+    .buyer_workorder_tbl_wrap{ 
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+    .buyer_workorder_tbl{ 
+        width:700px;
+    }
+.pi .pi_field{width:100% !important; clear:both;}
+
+
+.buyer_workorder_tbl tr td,
+.buyer_workorder_tbl tr{ width:100% !important; clear:both;}
+
+.crateViewFieldBox{ width:100%;}
+}
+
+

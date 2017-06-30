@@ -1,0 +1,118 @@
+html, body{ height: 100%; background: #f2f2f2;}
+body{ margin: 0; padding: 0; overflow-x: hidden; }
+#mainWrap{ display: flex; min-height: 100%; }
+
+input[type=checkbox] {
+   position: absolute;
+   opacity: 0;
+}
+.mainMenuBar {
+   position: absolute;
+   top: 10px;
+   left: 40px;
+   z-index: 1;
+   display: block;
+   font-size:3em;
+   color: #bbb !important;
+   cursor: pointer;
+   width:30px;
+   height:30px;
+   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' version='1.1' x='0px' y='0px' width='30px' height='30px' viewBox='0 0 30 30' enable-background='new 0 0 30 30' xml:space='preserve'><rect width='30' height='6'/><rect y='24' width='30' height='6'/><rect y='12' width='30' height='6'/></svg>");
+
+   transform: translate3d(0, 0, 0);
+   transition: transform .4s;
+}
+.mainMenuBar:hover{ color:#fff !important;}
+
+input[type=checkbox]:checked ~ .mainMenuBar {
+   transform: translate3d(250px, 0, 0) rotate(90deg);
+}
+.mainContentBx {
+   width:100%;
+   padding: 0px;
+   background: #f2f2f2;
+   transform: translate3d(0, 0, 0);
+   transition: transform .4s;
+}
+input[type=checkbox]:checked ~ .mainContentBx {
+   transform: translate3d(250px, 0, 0);
+}
+input[type=checkbox]:checked ~ .mainSlideMenu {
+   transform: translate3d(0, 0, 0);
+}
+input[type=checkbox]:checked ~ .mainSlideMenu nav.mainMenu li {
+   width: 100%;
+}
+.mainSlideMenu {
+   transform: translate3d(-250px, 0, 0);
+   position: absolute;
+   width: 250px;
+   padding: 0 7px;
+   color: #ddd;
+   left: 0;
+   height: 100%;
+   transition: all .4s;
+   -webkit-transition: all .4s;
+   background: linear-gradient(#01355c, #045ca3);
+}
+.mainSlideMenu h1 {
+   margin: 10px;
+   text-shadow: 1px 1px 1px #000;
+}
+nav.mainMenu {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+
+.panel-heading{ padding:0;}
+.panel-heading a{ display: block; text-decoration: none; padding: 7px;}
+.panel-heading .glyphicon{ padding-right: 10px;}
+
+nav.mainMenu .panel-group .panel{ overflow: visible;}
+nav.mainMenu .panel-body{ padding: 15px 0px 7px 15px;}
+nav.mainMenu .panel-body ul{ margin:0; padding: 0;}
+nav.mainMenu .panel-body ul li{ list-style:none;}
+nav.mainMenu .panel-body ul li a{ display: block; padding: 5px 5px; text-decoration:none; border-bottom: 1px #f2f2f2 solid;}
+nav.mainMenu .panel-body ul li .glyphicon{ padding-right:10px;}
+nav.mainMenu .panel-body ul li i.label{ padding-left:10px;}
+
+
+nav.mainMenu .panel-body ul > li > ul.sub_ul,
+nav.mainMenu .panel-body ul > li:hover > ul.sub_ul{
+    transition: all .4s;
+    -webkit-transition: all .4s;
+}
+
+nav.mainMenu a {
+   display: block;
+   text-decoration: none;
+   color: #fff;
+   font-size: 12px;
+   padding: 4px 15px;
+   background: linear-gradient(#01355c, #045ca3);
+   box-shadow: inset 0px 1px 1px #8b9db3;
+}
+nav.mainMenu a:hover {
+   background: #ff0;
+   box-shadow: inset 0px 1px 1px #475059;
+   color:#000;
+   font-weight:600;
+}
+.panel-collapse:hover .panel-body,
+.panel-collapse.in .panel-body{ background: #6699CC; }
+
+.mainMenu .panel-default { border-color: #012a4a;}
+
+nav.mainMenu .panel-body ul li{ position:relative;}
+nav.mainMenu .panel-body ul ul.sub_ul{ display:none; position: absolute; top:0; left: 100%; z-index:999; width: 260px; padding: 7px; background:#6699cc; }
+nav.mainMenu .panel-body ul > li:hover > ul.sub_ul{ display:block;}
+
+.sub_ul li a{ background: #5886b4; }
+
+..panel-collapse.in .panel-body ul li a{ background:red; }
+
+
+
+
